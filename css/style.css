@@ -178,7 +178,10 @@ textarea:focus {
 .text-center {
   text-align: center; }
 
-.text-right {
+.text-left, .leftmost-column {
+  text-align: left; }
+
+.text-right, .rightmost-column {
   text-align: right; }
 
 .float-right {
@@ -202,6 +205,241 @@ body {
 .grid-row {
   display: table-row; }
 
-.grid-cell {
+.grid-cell, .leftmost-column, .rightmost-column {
   display: table-cell;
   vertical-align: middle; }
+
+/* General button style (reset) */
+.btn {
+  border: 2px solid #111111;
+  background: none;
+  cursor: pointer;
+  padding: 10px 40px;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  outline: none;
+  position: relative;
+  margin-right: 0.71429em;
+  margin-right: 0.71429rem;
+  -webkit-all: 0.3s;
+  -moz-all: 0.3s;
+  -ms-all: 0.3s;
+  -o-all: 0.3s;
+  all: 0.3s; }
+
+.btn:after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  -webkit-all: 0.3s;
+  -moz-all: 0.3s;
+  -ms-all: 0.3s;
+  -o-all: 0.3s;
+  all: 0.3s; }
+
+/* Button 1e */
+.btn-1e {
+  overflow: hidden; }
+
+.btn-1e:after {
+  width: 100%;
+  height: 0;
+  top: 50%;
+  left: 50%;
+  background: #fff;
+  opacity: 0;
+  -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  -moz-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  transform: translateX(-50%) translateY(-50%) rotate(45deg); }
+
+.btn-1e:hover,
+.btn-1e:active {
+  color: #0e83cd; }
+
+.btn-1e:hover:after {
+  height: 260%;
+  opacity: 1; }
+
+.btn-1e:active:after {
+  height: 400%;
+  opacity: 1; }
+
+.strip-list {
+  list-style: none;
+  padding: 0; }
+
+/*************************************
+Build the scene and rotate on hover
+**************************************/
+.scene {
+  width: 260px;
+  height: 400px;
+  margin: 30px;
+  display: inline-block;
+  -webkit-perspective: 1000px;
+  -moz-perspective: 1000px;
+  perspective: 1000px; }
+
+.movie {
+  width: 260px;
+  height: 400px;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform: translateZ(-130px);
+  -moz-transform: translateZ(-130px);
+  transform: translateZ(-130px);
+  -webkit-transition: -webkit-transform 350ms;
+  -moz-transition: -moz-transform 350ms;
+  transition: transform 350ms; }
+
+.movie:hover {
+  -webkit-transform: rotateY(-78deg) translateZ(20px);
+  -moz-transform: rotateY(-78deg) translateZ(20px);
+  transform: rotateY(-78deg) translateZ(20px); }
+
+/*************************************
+Transform and style the two planes
+**************************************/
+.movie .poster,
+.movie .info {
+  position: absolute;
+  width: 260px;
+  height: 400px;
+  background-color: #fff;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden; }
+
+.movie .poster {
+  -webkit-transform: translateZ(130px);
+  -moz-transform: translateZ(130px);
+  transform: translateZ(130px);
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.movie .info {
+  -webkit-transform: rotateY(90deg) translateZ(130px);
+  -moz-transform: rotateY(90deg) translateZ(130px);
+  transform: rotateY(90deg) translateZ(130px);
+  border: 1px solid #B8B5B5;
+  font-size: 0.75em; }
+
+/*************************************
+Shadow beneath the 3D object
+**************************************/
+.csstransforms3d .movie::after {
+  content: '';
+  width: 260px;
+  height: 260px;
+  position: absolute;
+  bottom: 0;
+  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.3);
+  -webkit-transform-origin: 100% 100%;
+  -moz-transform-origin: 100% 100%;
+  transform-origin: 100% 100%;
+  -webkit-transform: rotateX(90deg) translateY(130px);
+  -moz-transform: rotateX(90deg) translateY(130px);
+  transform: rotateX(90deg) translateY(130px);
+  -webkit-transition: box-shadow 350ms;
+  -moz-transition: box-shadow 350ms;
+  transition: box-shadow 350ms; }
+
+.csstransforms3d .movie:hover::after {
+  box-shadow: 20px -5px 50px rgba(0, 0, 0, 0.3); }
+
+/*************************************
+Movie information
+**************************************/
+.info header {
+  background-position: center right;
+  color: #FFF;
+  padding: 7px 10px;
+  font-weight: bold;
+  height: 195px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  text-shadow: 0px 1px 1px black; }
+
+.info header h1 {
+  margin: 0 0 2px;
+  font-size: 1.4em; }
+
+.info header .rating {
+  border: 1px solid #FFF;
+  padding: 0px 3px; }
+
+.info p {
+  padding: 1.2em 1.4em;
+  margin: 2px 0 0;
+  font-weight: 700;
+  color: #666;
+  line-height: 1.4em;
+  border-top: 10px solid #555; }
+
+/*************************************
+Generate "lighting" using box shadows
+**************************************/
+.movie .poster,
+.movie .info,
+.movie .info header {
+  -webkit-transition: box-shadow 350ms;
+  -moz-transition: box-shadow 350ms;
+  transition: box-shadow 350ms; }
+
+.csstransforms3d .movie .poster {
+  box-shadow: inset 0px 0px 40px rgba(255, 255, 255, 0); }
+
+.csstransforms3d .movie:hover .poster {
+  box-shadow: inset 300px 0px 40px rgba(255, 255, 255, 0.8); }
+
+.csstransforms3d .movie .info,
+.csstransforms3d .movie .info header {
+  box-shadow: inset -300px 0px 40px rgba(0, 0, 0, 0.5); }
+
+.csstransforms3d .movie:hover .info,
+.csstransforms3d .movie:hover .info header {
+  box-shadow: inset 0px 0px 40px rgba(0, 0, 0, 0); }
+
+/*************************************
+Posters and still images
+**************************************/
+.scene:nth-child(1) .movie .poster {
+  background-image: url("../img/poster1.jpeg"); }
+
+.scene:nth-child(2) .poster {
+  background-image: url("../img/poster2.jpeg"); }
+
+.scene:nth-child(3) .poster {
+  background-image: url("../img/poster3.jpeg"); }
+
+.scene:nth-child(1) .info header {
+  background-image: url("../img/still1.jpeg"); }
+
+.scene:nth-child(2) .info header {
+  background-image: url("../img/still2.jpeg"); }
+
+.scene:nth-child(3) .info header {
+  background-image: url("../img/still3.jpeg"); }
+
+/*************************************
+Fallback
+**************************************/
+.no-csstransforms3d .movie .poster,
+.no-csstransforms3d .movie .info {
+  position: relative; }
+
+/*************************************
+Media Queries
+**************************************/
+@media screen and (max-width: 768px) {
+  .scene {
+    display: block;
+    margin: 0px auto 50px;
+    padding: 0.71429em;
+    padding: 0.71429rem; } }
+.separator-3d, header {
+  box-shadow: 1px 1px 8px #111; }

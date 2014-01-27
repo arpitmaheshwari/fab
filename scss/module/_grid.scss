@@ -7,3 +7,11 @@
 .grid-cell{
   @include cssTableCell(null,middle);
 }  
+.leftmost-column{
+	@extend .grid-cell;
+	@extend .text-left;
+}
+.rightmost-column{
+	@extend .grid-cell;
+	@extend .text-right;
+}
