@@ -1,0 +1,34 @@
+//defining the fallback fonts
+$fallbackFonts:", helvetica, arial, sans-serif";
+
+//defining path variable for base font directory
+$fontPath: "../../fonts/";
+
+//defining path for specific font sub-directories
+$pathFrutigerltstd45:"frutiger-45/";
+$pathFrutigerltstd55:"frutiger-55/";
+$pathFrutigerltstd65:"frutiger-65/";
+
+@font-face {
+    font-family: 'FrutigerLTStd45Light';
+    src:  url($fontPath + $pathFrutigerltstd45 + 'frutigerltstd-light.svg#FrutigerLTStd45Light') format('svg'),
+          url($fontPath + $pathFrutigerltstd45 + 'frutigerltstd-light.ttf') format('truetype'),
+          url($fontPath + $pathFrutigerltstd45 + 'frutigerltstd-light.woff') format('woff'),
+          url($fontPath + $pathFrutigerltstd45 + 'frutigerltstd-light.eot') format('embedded-opentype');
+        }
+
+@font-face {
+    font-family: 'FrutigerLTStd55Roman';
+    src: url($fontPath + $pathFrutigerltstd55 + 'frutigerltstd-roman.svg#FrutigerLTStd55Roman') format('svg'),
+         url($fontPath + $pathFrutigerltstd55 + 'frutigerltstd-roman.ttf') format('truetype'),
+         url($fontPath + $pathFrutigerltstd55 + 'frutigerltstd-roman.woff') format('woff'),
+         url($fontPath + $pathFrutigerltstd55 + 'frutigerltstd-roman.eot') format('embedded-opentype');
+
+}
+@font-face {
+  font-family: 'FrutigerLTStd55Bold';
+  src: url($fontPath + $pathFrutigerltstd65 + 'frutigerltstd-bold.svg#FrutigerLTStd55bold') format('svg'),
+  url($fontPath + $pathFrutigerltstd65 + 'frutigerltstd-bold.ttf') format('truetype'),
+  url($fontPath + $pathFrutigerltstd65 + 'frutigerltstd-bold.woff') format('woff'),
+  url($fontPath + $pathFrutigerltstd65 + 'frutigerltstd-bold.eot') format('embedded-opentype');
+}

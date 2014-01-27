@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'FrutigerLTStd65Bold';
+    src: url('frutigerltstd-bold.eot');
+    src: url('frutigerltstd-bold.eot') format('embedded-opentype'),
+         url('frutigerltstd-bold.woff') format('woff'),
+         url('frutigerltstd-bold.ttf') format('truetype'),
+         url('frutigerltstd-bold.svg#FrutigerLTStd65Bold') format('svg');
+}

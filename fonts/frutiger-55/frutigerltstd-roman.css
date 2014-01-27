@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'FrutigerLTStd55Roman';
+    src: url('frutigerltstd-roman.eot');
+    src: url('frutigerltstd-roman.eot') format('embedded-opentype'),
+         url('frutigerltstd-roman.woff') format('woff'),
+         url('frutigerltstd-roman.ttf') format('truetype'),
+         url('frutigerltstd-roman.svg#FrutigerLTStd55Roman') format('svg');
+}

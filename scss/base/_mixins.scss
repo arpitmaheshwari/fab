@@ -1,0 +1,67 @@
+/*Vendor Prefixing*/
+@mixin css-browser-prefix($property, $value) {
+     @each $prefix in -webkit-, -moz-, -ms-, -o-, '' {
+          #{$prefix}#{$property}: $value;
+     }
+}
+//Mixins for table layout
+@mixin cssTable($width:false){
+  display : table;
+  @if $width{
+    width : $width;
+  }
+}
+@mixin cssTableRow(){
+  display : table-row;
+}
+@mixin cssTableCell($width:false,$verticalAlign:false){
+  display : table-cell;
+  @if $width {
+    width:$width;
+  }
+  @if $verticalAlign{
+    vertical-align : $verticalAlign;
+  }
+}
+@mixin PxToEm($property,$value){
+  #{$property}: ($value/$defaultFontSize) + em;
+  #{$property}: ($value/$defaultFontSize) + rem;
+}
+@mixin PxToPercent($property,$value){
+  #{$property}: ($value/$referredWidth)*100%;
+}
+@mixin setDimensions($width:false,$height:false){
+  @if $width {
+    @include PxToPercent(min-width,$width);
+  }
+  @if $height {
+    @include PxToEm(min-height,$height);
+  }
+}
+@mixin setFont($fontFamily:false,$fontSize:false,$fontWeight:false){
+  @if $fontFamily
+    {
+      font-family: $fontFamily + $fallbackFonts;
+    }
+  @if $fontSize
+    {
+      @include PxToEm("font-size",$fontSize);
+    }
+  @if $fontWeight
+    {
+      font-weight: $fontWeight;
+    }
+}
+@mixin setBorderRadius($value:5px){
+  // ie specific
+  border-top-left-radius : $value;
+  border-top-right-radius : $value;
+  border-bottom-left-radius : $value;
+  border-bottom-right-radius : $value;
+  //other browsers
+  @include css-browser-prefix(border-radius, $value);
+}
+
+@function calcPercent($value){
+  @return ($value/$referredWidth)*100%;
+}
