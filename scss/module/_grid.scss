@@ -1,6 +1,7 @@
 .grid{
-  display: inline-table;
+  	display: inline-table;
 	width: 91%;
+	padding:10px 0;
 }
 .grid-row{
   @include cssTableRow;

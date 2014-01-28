@@ -399,7 +399,8 @@ body {
 
 .grid {
   display: inline-table;
-  width: 91%; }
+  width: 91%;
+  padding: 10px 0; }
 
 .grid-row {
   display: table-row; }
@@ -648,7 +649,9 @@ Media Queries
   letter-spacing: 1px;
   font-weight: 700;
   outline: none;
-  padding: 10px 40px; }
+  padding: 10px 40px;
+  margin-left: 0.71429em;
+  margin-left: 0.71429rem; }
 
 .separator-3d, header {
   box-shadow: 1px 1px 8px #111; }
