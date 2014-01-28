@@ -1,7 +1,7 @@
 
 .tt-grid {
 	position: relative;
-	margin: 20px auto 0;
+	margin: 20px auto -40px;
 	padding: 0;
 	max-width: 960px;
 	list-style: none;
@@ -59,7 +59,7 @@
 	width: 18px;
 	height: 18px;
 	border-radius: 50%;
-	background: #fff;
+	background: rgba(17,17,17,0.4);
 	cursor: pointer;
 	opacity: 0.7;
 	-webkit-transition: all 0.2s;
@@ -77,7 +77,8 @@
 
 .tt-grid-wrapper nav a.tt-current {
 	opacity: 1;
-	box-shadow: 0 0 0 5px rgba(255,255,255,0.4);
+	box-shadow: 0 0 0 3px rgba(1,1,1,0.6);
+
 }
 
 .tt-grid.tt-effect-active li a {
