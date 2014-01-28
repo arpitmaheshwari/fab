@@ -2,12 +2,13 @@
 $fallbackFonts:", helvetica, arial, sans-serif";
 
 //defining path variable for base font directory
-$fontPath: "../../fonts/";
+$fontPath: "../fonts/";
 
 //defining path for specific font sub-directories
-$pathFrutigerltstd45:"frutiger-45/";
-$pathFrutigerltstd55:"frutiger-55/";
-$pathFrutigerltstd65:"frutiger-65/";
+$pathFrutigerltstd45:"frutiger/frutiger-45/";
+$pathFrutigerltstd55:"frutiger/frutiger-55/";
+$pathFrutigerltstd65:"frutiger/frutiger-65/";
+$pathFontAwesome:"font-awesome-4.0.3/fonts/";
 
 @font-face {
     font-family: 'FrutigerLTStd45Light';
@@ -31,4 +32,15 @@ $pathFrutigerltstd65:"frutiger-65/";
   url($fontPath + $pathFrutigerltstd65 + 'frutigerltstd-bold.ttf') format('truetype'),
   url($fontPath + $pathFrutigerltstd65 + 'frutigerltstd-bold.woff') format('woff'),
   url($fontPath + $pathFrutigerltstd65 + 'frutigerltstd-bold.eot') format('embedded-opentype');
+}
+
+
+@font-face {
+  font-family: 'fontawesome';
+    src:  url($fontPath + $pathFontAwesome +'fontawesome-webfont.svg#fontawesome-webfont') format('svg'),
+   url($fontPath + $pathFontAwesome +'fontawesome-webfont.eot'),
+    url($fontPath + $pathFontAwesome +'fontawesome-webfont.woff') format('woff'),
+    url($fontPath + $pathFontAwesome +'fontawesome-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
