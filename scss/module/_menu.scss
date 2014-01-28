@@ -1,56 +1,15 @@
-.icon-team, .icon-blog, .icon-home, .icon-portfolio, .icon-services, .icon-contact, .icon-menu {
-	font-family: 'fontawesome';
-	speak: none;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
-	-webkit-font-smoothing: antialiased;
-}
-
-.icon-team:before {
-	content: "\e000";
-}
-
-.icon-blog:before {
-	content: "\e001";
-}
-
-.icon-home:before {
-	content: "\e002";
-}
-
-.icon-portfolio:before {
-	content: "\e003";
-}
-
-.icon-services:before {
-	content: "\e004";
-}
-
-.icon-contact:before {
-	content: "\e005";
-}
-
-.icon-menu:before {
-	content: "\f0c9";
-}
-
-a, li {
-	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
 
 
 /* Global CSS that are applied for all screen sizes */
 
 .nav ul {
 	max-width: 1240px;
-	margin: 0;
-	padding: 0;
+	margin: 0 auto;
+	padding: 0 0 10.5em;
 	list-style: none;
 	font-size: 1.5em;
 	font-weight: 300;
+	font-family:fontawesome;
 }
 
 .nav li span {
@@ -68,7 +27,7 @@ a, li {
 	transition: color .5s, background .5s, height .5s;
 }
 
-.nav i{
+.nav b{
 	/* Make the font smoother for Chrome */
 	-webkit-transform: translate3d(0, 0, 0);
 	-moz-transform: translate3d(0, 0, 0);
@@ -213,7 +172,7 @@ a, button {
 	}
 
 	/* Positioning the icons and preparing for the animation*/
-	.nav i {
+	.nav b {
 		position: relative;
 		display: inline-block;
 		margin: 0 auto;
@@ -383,7 +342,6 @@ a, button {
 	display: none;	
 	width: 100%;
 	padding: 0.5em 0.5em 0.8em;
-	font-family: 'Lato',Calibri,Arial,sans-serif;
 	font-weight: normal;
 	text-align: left;
 	color: rgb(7, 16, 15);

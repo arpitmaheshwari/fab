@@ -2,7 +2,7 @@
 
 .circular-nav {
 	position: relative;
-	margin-bottom: 3em;
+	margin: 13em auto 5em;
 	height: 15em;
 	background: rgba(0,0,0,0.05);
 
@@ -162,7 +162,6 @@
 	display: block;
 	font-size: .5em;
 	font-weight: 700;
-	text-transform: uppercase;
 }
 
 .csstransforms .cn-wrapper li a:hover,
