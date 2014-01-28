@@ -32,7 +32,7 @@
 	height: 0;
 	top: 50%;
 	left: 50%;
-	background: #fff;
+	background: $black;
 	opacity: 0;
 	-webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
 	-moz-transform: translateX(-50%) translateY(-50%) rotate(45deg);
@@ -42,15 +42,15 @@
 
 .btn-1e:hover,
 .btn-1e:active {
-	color: #0e83cd;
+	color: $white;
 }
 
 .btn-1e:hover:after {
 	height: 260%;
-	opacity: 1;
+	opacity: 0.4;
 }
 
 .btn-1e:active:after {
 	height: 400%;
-	opacity: 1;
+	opacity: 0.4;
 }
