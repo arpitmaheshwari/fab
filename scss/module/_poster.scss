@@ -101,13 +101,13 @@ Movie information
 
 .info header {
 	background-position:center right;
-	color: #FFF;
 	padding: 7px 10px;
-	font-weight: bold;
+	@extend .bold;
+	@extend .text-left;
 	height: 195px;
 	background-size: contain;
 	background-repeat: no-repeat;
-	text-shadow: 0px 1px 1px rgba(0,0,0,1);
+	text-shadow: 0px 1px 1px rgba(0,0,0,0.5);
 }
 
 .info header h1 {
