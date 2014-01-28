@@ -11,7 +11,7 @@
 	font-weight: 700;
 	outline: none;
 	position: relative;
-	@include PxToEm(margin-right,10px);
+	@include PxToEm(margin-left,10px);
 	@include css-browser-prefix(all,0.3s);
 }
 

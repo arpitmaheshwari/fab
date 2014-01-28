@@ -408,6 +408,10 @@ body {
   display: table-cell;
   vertical-align: middle; }
 
+header {
+  padding-top: 0.71429em;
+  padding-top: 0.71429rem; }
+
 /* General button style (reset) */
 .btn {
   border: 2px solid #111111;
@@ -420,8 +424,8 @@ body {
   font-weight: 700;
   outline: none;
   position: relative;
-  margin-right: 0.71429em;
-  margin-right: 0.71429rem;
+  margin-left: 0.71429em;
+  margin-left: 0.71429rem;
   -webkit-all: 0.3s;
   -moz-all: 0.3s;
   -ms-all: 0.3s;
