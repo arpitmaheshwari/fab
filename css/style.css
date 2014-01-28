@@ -323,10 +323,6 @@ input[type="search"] {
  * Safari (but not Chrome) clips the cancel button when the search input has
  * padding (and `textfield` appearance).
  */
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none; }
-
 /**
  * Define consistent border, margin, and padding.
  */
@@ -481,11 +477,17 @@ header {
   opacity: 0.1;
   cursor: default;
   z-index: 10;
-  line-height: 1; }
+  line-height: 1;
+  text-align: center;
+  position: absolute;
+  top: 0; }
 
 .strip-list {
   list-style: none;
   padding: 0; }
+
+.for-everyone {
+  position: relative; }
 
 /*************************************
 Build the scene and rotate on hover
@@ -660,13 +662,13 @@ Media Queries
   letter-spacing: 1px;
   font-weight: 700;
   outline: none;
-  padding: 10px 40px;
+  padding: 11px 10px;
   margin-left: 0.71429em;
   margin-left: 0.71429rem;
   margin-top: 0.71429em;
   margin-top: 0.71429rem; }
 
-.separator-3d, header {
+.separator-3d, header, .for-everyone {
   box-shadow: 1px 1px 8px #111; }
 
 /* Global CSS that are applied for all screen sizes */
@@ -1755,7 +1757,6 @@ a, button {
 
 .circular-nav {
   position: relative;
-  margin: 13em auto 5em;
   height: 15em;
   background: rgba(0, 0, 0, 0.05); }
   .circular-nav > h2 {
