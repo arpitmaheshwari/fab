@@ -398,8 +398,8 @@ body {
   line-height: 1.5; }
 
 .grid {
-  display: table;
-  width: 100%; }
+  display: inline-table;
+  width: 91%; }
 
 .grid-row {
   display: table-row; }
