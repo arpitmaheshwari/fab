@@ -5,7 +5,7 @@
 .nav ul {
 	max-width: 1240px;
 	margin: 0 auto;
-	padding: 0 0 10.5em;
+	padding: 0 0 9.5em;
 	list-style: none;
 	font-size: 1.5em;
 	font-weight: 300;
@@ -142,7 +142,7 @@ a, button {
 	}
 
 	.icon + span {
-		margin-top: 2.1em;
+		margin-top: 1.1em;
 		-webkit-transition: margin .5s;
 		-moz-transition: margin .5s;
 		-o-transition: margin .5s;
@@ -152,18 +152,18 @@ a, button {
 
 	/* Animating the height of the element*/
 	.nav a {
-		height: 9em;
+		height: 8em;
 	}
 
 	.no-touch .nav a:hover ,
 	.nav a:active ,
 	.nav a:focus {
-		height: 10em;
+		height: 9em;
 	}	
 
 	/* Making the text follow the height animation */
 	.no-touch .nav a:hover .icon + span {
-		margin-top: 3.2em;
+		margin-top: 2.2em;
 		-webkit-transition: margin .5s;
 		-moz-transition: margin .5s;
 		-o-transition: margin .5s;
