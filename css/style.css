@@ -660,7 +660,9 @@ Media Queries
   outline: none;
   padding: 10px 40px;
   margin-left: 0.71429em;
-  margin-left: 0.71429rem; }
+  margin-left: 0.71429rem;
+  margin-top: 0.71429em;
+  margin-top: 0.71429rem; }
 
 .separator-3d, header {
   box-shadow: 1px 1px 8px #111; }
