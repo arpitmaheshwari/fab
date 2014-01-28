@@ -479,7 +479,9 @@ header {
   font-style: italic;
   font-size: 12em;
   opacity: 0.1;
-  cursor: default; }
+  cursor: default;
+  z-index: 10;
+  line-height: 1; }
 
 .strip-list {
   list-style: none;
@@ -901,10 +903,11 @@ a, button {
     display: inline-block; }
 
   .nav li span.icon {
-    width: 50%; }
+    width: 35%; }
 
   .nav li .icon + span {
-    font-size: 1em; }
+    font-size: 1em;
+    width: 50%; }
 
   .icon + span {
     position: relative;
@@ -1006,6 +1009,12 @@ a, button {
   /* make the nav bigger on touch screens */
   .touch .nav a {
     padding: 0.8em; } }
+.tt-grid-wrapper {
+  position: relative; }
+  .tt-grid-wrapper .bg-title {
+    position: absolute;
+    left: 22%; }
+
 .tt-grid {
   position: relative;
   margin: 20px auto -40px;

@@ -1,4 +1,11 @@
+.tt-grid-wrapper{
+	position:relative;
 
+	.bg-title{
+		position: absolute;
+		left: 22%;
+	}
+}	
 .tt-grid {
 	position: relative;
 	margin: 20px auto -40px;
