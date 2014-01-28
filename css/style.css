@@ -471,6 +471,16 @@ header {
   height: 400%;
   opacity: 0.4; }
 
+.bg-title {
+  background: rgba(0, 0, 0, 0.05);
+  text-transform: uppercase;
+  white-space: nowrap;
+  font-weight: 300;
+  font-style: italic;
+  font-size: 12em;
+  opacity: 0.1;
+  cursor: default; }
+
 .strip-list {
   list-style: none;
   padding: 0; }
@@ -870,6 +880,9 @@ a, button {
     transition: background 0.5s; } }
 /* CSS specific to the 2x3 columns version */
 @media (min-width: 32.5em) and (max-width: 49.938em) {
+  .nav ul {
+    padding-bottom: 0.2em; }
+
   /* Creating the 2 column layout using floating elements once again */
   .nav li {
     display: block;
@@ -920,7 +933,10 @@ a, button {
     width: 50%; }
 
   .nav li .icon + span {
-    font-size: 0.9em; } }
+    font-size: 0.9em; }
+
+  .nav ul {
+    padding-bottom: o 0.2em; } }
 /* Styling the toggle menu link and hiding it */
 .nav .navtoogle {
   display: none;
@@ -951,27 +967,10 @@ a, button {
     display: block; }
 
   /* Animating the height of the navigation when the button is clicked */
-  /* When JavaScript is disabled, we hide the menu */
-  .no-js .nav ul {
-    max-height: 30em;
-    overflow: hidden; }
-
-  /* When JavaScript is enabled, we hide the menu */
-  .js .nav ul {
-    max-height: 0em;
-    overflow: hidden; }
-
-  /* Displaying the menu when the user has clicked on the button*/
-  .js .nav .active + ul {
-    max-height: 30em;
-    overflow: hidden;
-    -webkit-transition: max-height .4s;
-    -moz-transition: max-height .4s;
-    -o-transition: max-height .4s;
-    -ms-transition: max-height .4s;
-    transition: max-height .4s; }
-
   /* Adapting the layout of the menu for smaller screens : icon on the left and text on the right*/
+  .nav ul {
+    padding-bottom: 0.2em; }
+
   .nav li span {
     display: inline-block;
     height: 100%; }
